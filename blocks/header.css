@@ -1,0 +1,8 @@
+.header {
+margin: auto;
+max-width: 880px;
+width: 100%;
+padding: 0;
+box-sizing: border-box;
+font-family: "Inter", sans-serif;
+}

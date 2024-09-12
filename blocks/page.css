@@ -1,0 +1,10 @@
+.page{
+margin: auto;
+background-color: #000000;
+color: #ffffff;
+font-family: "Inter", "Arial", sans-serif;
+margin-top: 45px;
+margin-bottom: 60px;
+overflow-x: hidden;
+}
+

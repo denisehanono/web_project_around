@@ -1,0 +1,72 @@
+.card{
+    position: relative;
+    width: 282px;
+    height: 340px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card__image{
+width: 100%;
+height: 282px;
+object-fit: cover;
+border-radius: 10px 10px 0 0;
+}
+
+.card__title{
+font-family: "Inter", sans-serif;
+color: black;
+font-size: 24px;
+font-weight: 900;
+line-height: 29.05px;
+text-align: left;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+max-width: 240px;
+}
+
+.card__description{
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+}
+
+
+
+.card__button_like{
+    width: 21px; 
+    height: 19px;
+background-color: transparent;
+background-image: url(../images/heart.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+border: none;
+padding: 0;
+margin: 0;
+}
+
+.card__button_active{
+    background-image: url(../images/heartblack.svg);
+}
+
+.card__button_like:hover{
+opacity: 50%;
+}
+
+.button__delete{
+    width: 20px;
+    height: 20px;
+    border: none;
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 20px; 
+    background-color: transparent;
+}
+
