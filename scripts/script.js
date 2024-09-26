@@ -74,19 +74,15 @@ submitButtonCards.addEventListener('click', function(evt){
     popupCards.classList.remove('popup__opened'); 
 });
 
-initialCards.forEach(function () {
-    const newCard = new Card(this.name, this.link);
+initialCards.forEach(function (item){
+    const newCard = new Card(item.name, item.link);
     cardArea.append(newCard.getCard());
 });
 
-// Aquí hay un error. 
-popupCards.addEventListener('click', function(){
-  popupCards.classList.add('popup__opened');
-});
-
-/* Así estaba antes:  
-  function openPopupCards('click', event){
-    popupCards.classList.add('popup__opened'); */
+// ?? está transparente
+function openPopupCards(){  
+    popupCards.classList.add('popup__opened');
+};
 
 function createCard(title, link){ 
     const card = cardTemplate.querySelector(".card").cloneNode(true);
@@ -96,24 +92,23 @@ function createCard(title, link){
     cardImage.src = link; 
     cardImage.addEventListener('click', function(){}); 
     cardArea.prepend(card);
-    
 
     const buttonDelete = card.querySelector('.button__delete'); 
     buttonDelete.addEventListener('click', function(){
-      card.remove();
+        card.remove();
     });
 
     const buttonLike = card.querySelector('.card__button_like'); 
     buttonLike.addEventListener('click', function(){
         buttonLike.classList.toggle('card__button_active'); 
-    });
+    }); 
 
     cardImage.addEventListener('click', function(){
         popupImage.classList.add('popup__opened');
         popupImage.querySelector('.popup__image').src = link;
         popupImage.querySelector('.popup__title_image').textContent = title;
         popupImage.querySelector('.popup__closed_img').addEventListener('click', function(){
-        popupImage.classList.remove('popup__opened');
+            popupImage.classList.remove('popup__opened');
         });
     });
 };
@@ -126,9 +121,10 @@ const closeOnEsc =(evt) => {
      }
   }
 
-document.addEventListener("keydown", closeOnEsc); 
+document.addEventListener("keydown", closeOnEsc);
 
-// ERROR
-const newCard = new Card("ABC","hola").setProperties();
-instanceCard.setProperties();
-console.log(instanceCard.link);
+// Error ?
+const nombreCard = new Card("nombre", "Foto");
+nombreCard.setProperties();
+console.log(nombreCard.title);
+console.log(nombreCard.link);

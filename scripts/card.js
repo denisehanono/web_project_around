@@ -1,4 +1,4 @@
-
+const cardTemplate = document.querySelector("#card-template").content;
 
 export default class Card {
     constructor(title, link) {
@@ -9,15 +9,22 @@ export default class Card {
         return cardTemplate.querySelector(".card").cloneNode(true);
     }
 
+    removeCard() {
+        this.htmlCard.remove();
+    }
+
     toggleLike() {
-        this.cardButtonLike.classList.toggle("button_inactive");
+        this.cardButtonLike.classList.toggle("card__button_like");
     }
 
     setEventListeners() {
-        cardButtonLike.addEventListener("click", () => {
+        this.cardButtonLike.addEventListener("click",() => {
             this.toggleLike();
         });
-    }
+        this.cardButtonDelete.addEventListener("click",() => {
+            this.removeCard();
+        });
+    } 
 
     setProperties() {
         this.htmlCard = this.getTemplate();
@@ -37,10 +44,10 @@ export default class Card {
 }
 
 
-    //NO 
+    /*/ NO 
     const cardType = {
-        title: " Cali ",     
-        link: " ",      
+        title: " C ",     
+        link: " httpsFoto ",      
         setProperties: function(){},      
         getTemplate: function(){},   
         setEventListeners: function (){},     
@@ -50,4 +57,5 @@ export default class Card {
         cardTitle: '<h3>    this.title    </h3>',
         cardButtonLike: '<button></button>', 
         cardButtonDelete: '<button></button>',
-    };
+    }; 
+    /*/
