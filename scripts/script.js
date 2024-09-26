@@ -24,6 +24,8 @@ const initialCards = [
       link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg"
     }
   ];
+
+import Card from './card.js';
 const popupProfile = document.querySelector('#popup-profile');
 const formProfile = document.querySelector('#form-profile');
 const popupCards = document.querySelector('#popup-place'); 
@@ -72,13 +74,19 @@ submitButtonCards.addEventListener('click', function(evt){
     popupCards.classList.remove('popup__opened'); 
 });
 
-initialCards.forEach(function (item){
-    createCard(item.name, item.link);
+initialCards.forEach(function () {
+    const newCard = new Card(this.name, this.link);
+    cardArea.append(newCard.getCard());
 });
 
-function openPopupCards(){  
-    popupCards.classList.add('popup__opened');
-};
+// Aquí hay un error. 
+popupCards.addEventListener('click', function(){
+  popupCards.classList.add('popup__opened');
+});
+
+/* Así estaba antes:  
+  function openPopupCards('click', event){
+    popupCards.classList.add('popup__opened'); */
 
 function createCard(title, link){ 
     const card = cardTemplate.querySelector(".card").cloneNode(true);
@@ -88,10 +96,11 @@ function createCard(title, link){
     cardImage.src = link; 
     cardImage.addEventListener('click', function(){}); 
     cardArea.prepend(card);
+    
 
     const buttonDelete = card.querySelector('.button__delete'); 
     buttonDelete.addEventListener('click', function(){
-        card.remove();
+      card.remove();
     });
 
     const buttonLike = card.querySelector('.card__button_like'); 
@@ -104,7 +113,7 @@ function createCard(title, link){
         popupImage.querySelector('.popup__image').src = link;
         popupImage.querySelector('.popup__title_image').textContent = title;
         popupImage.querySelector('.popup__closed_img').addEventListener('click', function(){
-            popupImage.classList.remove('popup__opened');
+        popupImage.classList.remove('popup__opened');
         });
     });
 };
@@ -117,4 +126,9 @@ const closeOnEsc =(evt) => {
      }
   }
 
-document.addEventListener("keydown", closeOnEsc);
+document.addEventListener("keydown", closeOnEsc); 
+
+// ERROR
+const newCard = new Card("ABC","hola").setProperties();
+instanceCard.setProperties();
+console.log(instanceCard.link);
