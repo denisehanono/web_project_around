@@ -51,7 +51,7 @@
               placeholder="Nombre"
               required
               value="Jacques Cousteau"  />
-              <span class="form__input-error" id="input-name-error"> Mensaje de error </span>
+              <span class="form__input-error" id="input-name-error"> </span>
            
             <input class="form__input" 
               type="text" 
@@ -63,7 +63,7 @@
               required
               placeholder="Acerca de mi" 
               value="Explorador" />
-              <span class="form__input-error"id="input-about-error"> Mensaje de error </span>
+              <span class="form__input-error"id="input-about-error"> </span>
 
             </fieldset>
           <button class="submit__button" type="submit"> Guardar</button>
@@ -72,7 +72,7 @@
     </div>
 
     <div class="popup" id = "popup-place">
-      <form class="form popup__form" id="form-place" method="get" >
+      <form class="form popup__form" id="form-cards" method="get" >
         <div class="form__box">
         <button class="popup__closed"> <img src="./images/x.svg" alt="close" /> </button>
           <fieldset class="form__fieldset">
@@ -87,7 +87,7 @@
               maxlength="40"
               required
               value="Título" />
-              <span class="form__input-error" id="input-title-error"> Mensaje de error </span>
+              <span class="form__input-error" id="input-title-error"> </span>
 
             <input class="form__input" 
               type="url" 
@@ -97,7 +97,7 @@
               placeholder="Url" 
               required
               value="Url" />
-              <span class="form__input-error" id="input-link-error"> Mensaje de error </span>
+              <span class="form__input-error" id="input-link-error"> </span>
           </fieldset>
           <button class="submit__button" type="submit"> Crear</button>
         </div>
@@ -117,7 +117,7 @@
         <img class="card__image" src="./images/yosemite.png" alt="card" />
         <div class="card__description">
           <h2 class="card__title">Valle de Yosemite</h2>
-          <button class="card__button_like"> 
+          <button class="card__button"> 
              
           </button>
           <button class="button button__delete"> <img src="./images/trash.svg" /> </button> 
@@ -132,8 +132,7 @@
   <footer class="footer">
     <p class="footer__copyright"> &#169; Copyright Denise Hanono, 2024. </p>
   </footer>
-  <script src="./scripts/script.js" type="module"></script>
-  <script src="./scripts/validate.js"></script> 
+  <script src="./scripts/index.js" type="module"></script>
 </body>
 
 </html>

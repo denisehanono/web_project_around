@@ -1,13 +1,14 @@
 const cardTemplate = document.querySelector("#card-template").content;
 
 export default class Card {
-    constructor(title, link) {
-        (this.title = title), (this.link = link);
+    constructor(title, link, openPopupImage) {
+        (this.title = title), (this.link = link), (this.openPopupImage = openPopupImage);
     }
     
     getTemplate(){
         return cardTemplate.querySelector(".card").cloneNode(true);
     }
+
 
     removeCard() {
         this.htmlCard.remove();
@@ -18,6 +19,9 @@ export default class Card {
     }
 
     setEventListeners() {
+        this.cardImage.addEventListener("click",() => {
+            this.openPopupImage(this.title, this.link);
+        });
         this.cardButtonLike.addEventListener("click",() => {
             this.toggleLike();
         });
@@ -30,7 +34,7 @@ export default class Card {
         this.htmlCard = this.getTemplate();
         this.cardImage = this.htmlCard.querySelector(".card__image");
         this.cardTitle = this.htmlCard.querySelector(".card__title");
-        this.cardButtonLike = this.htmlCard.querySelector(".card__button_like");
+        this.cardButtonLike = this.htmlCard.querySelector(".card__button");
         this.cardButtonDelete = this.htmlCard.querySelector(".button__delete");
         this.cardTitle.innerText = this.title;
         this.cardImage.src = this.link;
@@ -44,18 +48,4 @@ export default class Card {
 }
 
 
-    /*/ NO 
-    const cardType = {
-        title: " C ",     
-        link: " httpsFoto ",      
-        setProperties: function(){},      
-        getTemplate: function(){},   
-        setEventListeners: function (){},     
-        toggleLike: function(){},
-        htmlCard: ' <div class="card"></div>', 
-        cardImage: ' <img src= " this.link  "/>',  
-        cardTitle: '<h3>    this.title    </h3>',
-        cardButtonLike: '<button></button>', 
-        cardButtonDelete: '<button></button>',
-    }; 
-    /*/
+

@@ -35,7 +35,7 @@ position: relative;
     color: red;
     font-size: 8px;
     font-weight: 400;
-    opacity: 0;
+    opacity: 1;
 }
 
 .form__input-error_visible{
