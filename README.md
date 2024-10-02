@@ -9,6 +9,9 @@ Puedes editar tu perfil, y también borrar imágenes.
 Se utilizó Programación Orientada a Objetos,Clases, HTML, CSS y JavaScript.
 
 Sitio Web:  https://denisehanono.github.io/web_project_around/ 
+
+Si no se puede visualizar: 
+cmd + shift + r para que funcione el sitio en el navegador.
 _____________
 
 Sprint 10 - Web Project Around
