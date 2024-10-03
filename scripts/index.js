@@ -147,12 +147,6 @@ function createCard(title, link){
   });
 };
 
-
-initialCards.forEach(function (item){
-  const newCard = new Card(item.name, item.link);
-  cardArea.append(newCard.getCard());
-});
-
 formProfile.addEventListener('submit', function(event){
   event.preventDefault();
   profileTitle.textContent = inputName.value;

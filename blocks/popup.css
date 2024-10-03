@@ -60,6 +60,9 @@
 }
 
 
+.submit__button_disabled{
+    opacity: 0.5;
+}
 
 
 
@@ -96,6 +99,8 @@ opacity: 0.8;
 
 .popup__submit:disabled{
 opacity 
+
+//reset formularios 
 
 /* */
 

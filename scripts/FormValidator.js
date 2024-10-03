@@ -27,9 +27,23 @@ export default class FormValidator {
         }
     }
 
-    toggleButtonState(){}
+    toggleButtonState(){
+        const hasInvalidInput = this.inputList.some((inputElement) => {
+            return !inputElement.validity.valid;
+        })
+        if(!hasInvalidInput){
+            this.buttonElement.classList.remove(this.settings.inactiveButtonClass);
+            this.buttonElement.disabled = false;
+            } else{
+                this.buttonElement.classList.add(this.settings.inactiveButtonClass);
+                this.buttonElement.disabled = true;
+            }
+    }
+
     setEventListeners(){
         this.inputList = Array.from(this.formElement.querySelectorAll(this.settings.inputSelector))
+        this.buttonElement = this.formElement.querySelector(this.settings.submitButtonSelector);
+        this.toggleButtonState();
         this.inputList.forEach((inputElement) => {
             inputElement.addEventListener("input",()=>{
                 this.checkInputValidity(inputElement);
