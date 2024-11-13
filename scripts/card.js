@@ -2,7 +2,9 @@ const cardTemplate = document.querySelector("#card-template").content;
 
 export default class Card {
     constructor(title, link, openPopupImage) {
-        (this.title = title), (this.link = link), (this.openPopupImage = openPopupImage);
+        this.title = title;
+        this.link = link;
+        this.openPopupImage = openPopupImage;
     }
     
     getTemplate(){
@@ -28,7 +30,7 @@ export default class Card {
         this.cardButtonDelete.addEventListener("click",() => {
             this.removeCard();
         });
-    } 
+    }
 
     setProperties() {
         this.htmlCard = this.getTemplate();

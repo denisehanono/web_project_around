@@ -1,12 +1,10 @@
 export default class FormValidator {
     constructor(formElement, settings){
-        console.log(formElement);
         this.formElement = formElement;
         this.settings = settings;
     }
 
-    showInputError(inputElement, errorMessage){ //1:28:23
-        console.log(errorMessage);
+    showInputError(inputElement, errorMessage){ 
         const errorElement = this.formElement.querySelector(`#${inputElement.id}-error`);
         inputElement.classList.add(this.settings.inputErrorClass);
         errorElement.textContent = errorMessage;
@@ -19,8 +17,7 @@ export default class FormValidator {
     }
 
     checkInputValidity(inputElement){
-        console.log(inputElement);
-        if(!inputElement.validity.valid){
+         if(!inputElement.validity.valid){
             this.showInputError(inputElement, inputElement.validationMessage)
         } else{
             this.hideInputError(inputElement);
@@ -53,7 +50,6 @@ export default class FormValidator {
     }
      
     enableValidation(){
-        console.log(this.formElement);
         this.formElement.addEventListener("submit", function(evt){
             evt.preventDefault();
         })
