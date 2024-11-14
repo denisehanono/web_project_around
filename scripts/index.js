@@ -60,10 +60,6 @@ newpopupProfile.setEventListeners();
 newpopupCards.setEventListeners();
 newpopupImage.setEventListeners();
 
-console.log(newpopupProfile);
-console.log(newpopupCards);
-console.log(newpopupImage);
-
 // VALIDATION FORMS ----------------------------------------------------
 
 const validationProfileForm = new FormValidator(formProfile, settings);
