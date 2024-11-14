@@ -12,7 +12,7 @@ import {
  import PopupWithImage from './PopupWithImage.js';
  import PopupWithForm from './PopupWithForm.js';
  import Section from './Section.js';
- import UserInfo from './userInfo.js';
+ import userInfo from './userInfo.js';
 const profileEditButton = document.querySelector('.edit__button'); 
 const profileAddCardButton = document.querySelector('.add__button');
 const formProfile = document.querySelector('#form-profile');
