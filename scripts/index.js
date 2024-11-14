@@ -11,8 +11,8 @@ import {
  import Popup from './Popup.js';
  import PopupWithImage from './PopupWithImage.js';
  import PopupWithForm from './PopupWithForm.js';
- import Section from './Section.js';
- import userInfo from './userInfo.js';
+ import Section from './section.js';
+ import UserInfo from './UserInfo.js';
 const profileEditButton = document.querySelector('.edit__button'); 
 const profileAddCardButton = document.querySelector('.add__button');
 const formProfile = document.querySelector('#form-profile');
