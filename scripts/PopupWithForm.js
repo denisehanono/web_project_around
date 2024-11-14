@@ -22,20 +22,10 @@ export default class PopupWithForm extends Popup {
         //  data[form__input.name] = form__input.value;
     }
 
-    // es buscar todos los inputs que hay dentro de tu formalurio
-    // hint: usamos el Array.from(this.popupElement.querySelectorAll(''))
-    // hint: forEach de la lista anterior y asignar cada elemento el valor y el nombre del input en el objeto data
-   /*
-        array.forEach((inputElement) => {
-            data[inputElement.name] = inputElement.value
-        })
-         */
-        // retornar en un objeto los valores de esos inputs
-        // return data
     setEventListeners() {
         super.setEventListeners();
 
-        const formElement = this.popupElement.querySelector('.form')
+        const formElement = this.popupElement.querySelector('.form__input')
 
         formElement.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -52,3 +42,15 @@ export default class PopupWithForm extends Popup {
         // con ese popup hacer popupForm.addEventLister('submit', () => {})
     }
 }
+
+
+    // es buscar todos los inputs que hay dentro de tu formalurio
+    // hint: usamos el Array.from(this.popupElement.querySelectorAll(''))
+    // hint: forEach de la lista anterior y asignar cada elemento el valor y el nombre del input en el objeto data
+   /*
+        array.forEach((inputElement) => {
+            data[inputElement.name] = inputElement.value
+        })
+         */
+        // retornar en un objeto los valores de esos inputs
+        // return data
