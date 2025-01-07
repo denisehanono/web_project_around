@@ -13,7 +13,7 @@ Se creo PopUpWithForm, PopUpWithImage y PopupWithConfirmation para crear PopUps 
 
 Se añadió también UerInfo para mostrar el nombre y la biografía del usuario y Section para mostrar la sección de las cartas. 
 
-Sitio Web:  https://denisehanono.github.io/web_project_around/ 
+Sitio Web:  https://denisehanono.github.io/web_project_around/src/index.html
 
 Si no se puede visualizar: 
 cmd + shift + r para que funcione el sitio en el navegador.
