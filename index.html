@@ -19,7 +19,10 @@
 
 
   <section class="profile">
-    <img class="profile__image" src="./images/profile__img.jpg" alt="profile"/>
+    <div class="profile__image_edit">  
+      <img class="profile__image" 
+      src="./images/profile__img.jpg" 
+      alt="profile"/>  </div>
     <div class="profile__border-box">
       <div class="profile__container">
         <h1 class="profile__name"> Jacques Cousteau </h1>
@@ -33,6 +36,43 @@
   </section> 
 
   <main class="main">
+    <div class="popup" id = "popup-avatar">
+      <form class="form popup__form" id="form__avatar" method="get" >
+        <div class="form__box">
+        <button class="popup__closed" type="button"> 
+          <img src="./images/x.svg" alt="close" /> </button>
+          <fieldset class="form__fieldset">
+            <h2 class="form__title"> Nuevo avatar </h2>
+
+            <input class="form__input" 
+              type="url" 
+              name="avatar" 
+              id="input-avatar" 
+              alt="añadir url" 
+              placeholder="Url"
+              required
+              value=""  />
+              <span class="form__input-error" id="input-name-error"> </span>
+           
+            </fieldset>
+          <button class="submit__button" type="submit"> Guardar</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="popup" id = "popup-confirmation">
+      <form class="form popup__confirmation" id="form__confirmation" method="get" >
+        <div class="form__box">
+        <button class="popup__closed" type="button"> 
+          <img src="./images/x.svg" alt="close" /> </button>
+          <fieldset class="form__fieldset">
+            <h2 class="form__title"> ¿Estás seguro? </h2>           
+            </fieldset>
+          <button class="submit__button" type="button"> Confirmar </button>
+        </div>
+      </form>
+    </div>
+
     <div class="popup" id = "popup-profile">
       <form class="form popup__form" id="form-profile" method="get" >
         <div class="form__box">
@@ -118,7 +158,7 @@
         <div class="card__description">
           <h2 class="card__title">Valle de Yosemite</h2>
           <button class="card__button"> 
-             
+          <p class = "card__counter">0</p>
           </button>
           <button class="button button__delete"> <img src="./images/trash.svg" /> </button> 
         </div>

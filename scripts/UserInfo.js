@@ -8,4 +8,11 @@ export default class UserInfo {
         this.profileName.textContent = name;
         this.profileAbout.textContent = about;
     }
+
+    setProfileAvatar(avatar){
+        this.avatar.src = avatar;
+    }
 }
+
+// popup-avatar
+

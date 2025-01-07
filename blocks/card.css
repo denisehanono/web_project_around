@@ -59,6 +59,12 @@ margin: 0;
 opacity: 50%;
 }
 
+
+.card__counter{
+    margin-top: 20px;
+    font-size: 10px;
+}
+
 .button__delete{
     width: 20px;
     height: 20px;
