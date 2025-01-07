@@ -1,4 +1,4 @@
-import Popup from "./Popup.js"; 
+import Popup from "../scripts/Popup.js"; 
 
 // extends es herencia
 export default class PopupWithImage extends Popup {

@@ -1,5 +1,5 @@
-import Card from './card.js';
-import FormValidator from './FormValidator.js'; 
+import Card from '../scripts/card.js';
+import FormValidator from '../scripts/FormValidator.js'; 
 import { 
   initialCards,
   popupProfile,
@@ -7,14 +7,14 @@ import {
   closePopupProfile,
   closePopupCards,
   settings,
- } from './utils.js';
- import Popup from './Popup.js';
- import PopupWithImage from './PopupWithImage.js';
- import PopupWithConfirmation from './PopupWithConfirmation.js';
- import PopupWithForm from './PopupWithForm.js';
- import Section from './Section.js';
- import UserInfo from './UserInfo.js';
- import api from './api.js';
+ } from '../scripts/utils.js';
+ import Popup from '../scripts/Popup.js';
+ import PopupWithImage from '../scripts/PopupWithImage.js';
+ import PopupWithConfirmation from '../scripts/PopupWithConfirmation.js';
+ import PopupWithForm from '../scripts/PopupWithForm.js';
+ import Section from '../scripts/Section.js';
+ import UserInfo from '../scripts/UserInfo.js';
+ import api from '../scripts/api.js'; 
  console.log(api);
 const profileEditButton = document.querySelector('.edit__button'); 
 const profileAvatar = document.querySelector('.profile__image_edit');
