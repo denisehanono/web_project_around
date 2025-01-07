@@ -12,7 +12,7 @@ import {
  import PopupWithImage from './PopupWithImage.js';
  import PopupWithConfirmation from './PopupWithConfirmation.js';
  import PopupWithForm from './PopupWithForm.js';
- import Section from './section.js';
+ import Section from './Section.js';
  import UserInfo from './UserInfo.js';
  import api from './api.js';
  console.log(api);
